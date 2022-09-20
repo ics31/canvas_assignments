@@ -1,0 +1,6 @@
+#api key
+secrets.py
+
+#virtual env
+venv
+__pycache__
