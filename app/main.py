@@ -28,9 +28,7 @@ while True:
         except:
             print("Invalid Course ID. Please Try Again")
         added = False
-        print(course_lst)
     if choice == "2":
-        print(course_lst)
         if added:
             course_lsts = txt_file.readlines()
             for g in course_lsts:
