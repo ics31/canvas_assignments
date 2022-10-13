@@ -1,0 +1,11 @@
+{
+    "name": "Canvas Assignment Viewer",
+    "version": "1.0.0",
+    "description": "View Assignments with courses and due dates",
+    "manifest_version": 3,
+    "author": "Ryan Lee",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Canvas Assignments and Due Dates"
+    }
+}

@@ -26,26 +26,20 @@ async function fetchData(access_token) {
       classIds.push(class_id)
     }
   }
-  console.log(classes);
-  console.log(classIds);
   const assignment_names = []
   for (let i = 0; i < classIds.length; i++){
     const temp_assignments = [];
     for (let j = 0; j < classIds.length; j++){
       var course = classIds[i];
-      console.log(course)
       var assignments = `https://cors-anywhere.herokuapp.com/https://canvas.eee.uci.edu/api/v1/courses/${course}/assignments?access_token=${token}`;
       var res1 = await fetch(assignments);
       var record1 = await res1.json();
       var assignment_name = record1[j].name;
       temp_assignments.push(assignment_name);
     }
-    assignment_names.push(assignment_name)
+    assignment_names.push(assignment_name);
   }
-  console.log(assignment_names)
+  document.getElementById("class1").innerHTML=assignment_names[0];
 }
 
-function buttonToken(){
-  const token_input = document.getElementById("token").value;
-  return fetchData(token_input);
-}
+fetchData('');
